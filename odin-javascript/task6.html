@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Function scope example</title>
+	</head>
+	<body>
+		<script>
+			let x = prompt("Lütfen X sayısını giriniz.")
+			let y = prompt("Lütfen Y sayısını giriniz.")
+			pow(x, y)
+			function pow(x, y) {
+				if (x === "" || y === "") {
+					alert("Boş değer girdiniz, lütfen sayı giriniz.")
+					return
+				}
+
+				// Null veya undefined değerler varsa varsayılanları kullan
+				x = x ?? 1
+				y = y ?? 1
+
+				// Girdilerin sayısal olduğundan emin ol
+				if (isNaN(x) || isNaN(y)) {
+					alert("Lütfen geçerli bir sayı giriniz!")
+					return
+				}
+
+				let sum = x
+				for (let i = 1; i < y; i++) {
+					sum = sum * x
+				}
+				if (checkPositive(x, y) == true) {
+					console.log(sum)
+					return alert(sum)
+				}
+				return alert("Pozitif Değil.")
+			}
+			function checkPositive(x, y) {
+				return x >= 0 && y >= 0 ? true : false
+			}
+
+			function ask(question, yes, no) {
+				if (confirm(question)) yes()
+				else no()
+			}
+
+			ask(
+				"Do you agree?",
+				function () {
+					alert("You agreed.")
+				},
+				function () {
+					alert("You canceled the execution.")
+				}
+			)
+
+			let ask = (question, yes, no) => (confirm(question) ? yes() : no())
+			ask(
+				"Do you agree?",
+				() => {
+					alert("You agreed.")
+				},
+				() => {
+					alert("You canceled the execution.")
+				}
+			)
+
+			function ask(question, yes, no) {
+				if (confirm(question)) yes()
+				else no()
+			}
+
+			// usage: functions showOk, showCancel are passed as arguments to ask
+			ask(
+				"Do you agree?",
+				function showOk() {
+					alert("You agreed.")
+				},
+				function showCancel() {
+					alert("You canceled the execution.")
+				}
+			)
+
+			function showOk() {
+				alert("You agreed.")
+			}
+
+			function showCancel() {
+				alert("You canceled the execution.")
+			}
+		</script>
+	</body>
+</html>

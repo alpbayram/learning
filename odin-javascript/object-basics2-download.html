@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<title>Object basics: Task 2</title>
+		<style>
+			p {
+				color: purple;
+				margin: 0.5em 0;
+			}
+
+			* {
+				box-sizing: border-box;
+			}
+		</style>
+		<link rel="stylesheet" href="../styles.css" />
+	</head>
+
+	<body>
+		<section class="preview"></section>
+	</body>
+	<script>
+		let bandInfo
+
+		// Add your code here
+		band = {
+			name: "The Beatles",
+			nationality: "British",
+			genre: "Rock",
+			members: "4",
+			formed: "1960",
+			split: "1970",
+			albums: [
+				(album1 = { name: "Abbey Road", released: "1969" }),
+				(album1 = { name: "Sgt. Pepper's Lonely Hearts Club Band", released: "1967" }),
+			],
+		}
+    console.log(band.albums[0].name)
+		  bandInfo=`${band.name} iyi bir müzik grubudur. ${band.nationality} menşeilidir.${(band.split-band.formed)} yıldır aktiftir. ${band.genre} tarzıdır. İlk albümleri${band.albums[0].name}dir. Çıkış yılı ${band.albums[0].released}`
+		  console.log(bandInfo)
+		// Don't edit the code below here!
+
+		const section = document.querySelector("section")
+		let para1 = document.createElement("p")
+		para1.textContent = bandInfo
+		section.appendChild(para1)
+	</script>
+</html>

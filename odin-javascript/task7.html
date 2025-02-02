@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Function scope example</title>
+	</head>
+	<body>
+		<script>
+			// 			For now, just write each function and test the output with console.log.
+
+			// Write a function called add7 that takes one number and returns that number + 7.
+			// Write a function called multiply that takes 2 numbers and returns their product.
+			// Write a function called capitalize that takes a string and returns that string with only the first letter capitalized. Make sure that it can take strings that are lowercase, UPPERCASE or BoTh.
+			// Write a function called lastLetter that takes a string and returns the very last letter of that string:
+			// 	lastLetter("abcd") should return "d"
+
+			let add7 = (number) => {
+				let sonuc = number + 7
+				console.log(sonuc)
+				return sonuc
+			}
+			let multiply = (number1, number2) => {
+				let sonuc = number1 * number2
+				console.log(sonuc)
+				return sonuc
+			}
+
+			let capitalize = (string) => {
+				if (typeof string === "string") {
+					let upperString = string.charAt(0).toUpperCase()
+					let newString = upperString + string.slice(1)
+					return newString
+				}
+				return console.log("String girmediniz.")
+			}
+
+			let lastLetter = (string) => {
+				if (typeof string === "string") {
+					let newString = string.charAt(string.length - 1)
+					return newString
+				}
+				return console.log("String girmediniz.")
+			}
+			let i = 0
+			for (; i < 3; i++) {
+				setTimeout(() => {
+					console.log(i)
+				}, 1000)
+			}
+			for (let i = 0; i < 3; i++) {
+				setTimeout(() => {
+					console.log(i)
+				}, 1000)
+			}
+		</script>
+	</body>
+</html>

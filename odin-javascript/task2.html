@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<title>Math: Task 1</title>
+		<style>
+			p {
+				color: purple;
+				margin: 0.5em 0;
+			}
+			ol {
+				display: flex;
+				flex-direction: column;
+			}
+			section {
+				border: purple 5px solid;
+                padding: 2em;
+			}
+			body {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width: 45%;
+				height: 100vh;
+				max-height: 500px;
+				gap: 3vw;
+				border: 3px solid black;
+				margin: 2%;
+                justify-content: center;
+			}
+			* {
+				box-sizing: border-box;	
+				margin: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<section class="preview"></section>
+		<span
+			>Try updating the live code below to recreate the finished example by following these
+			steps:
+		</span>
+		<ol>
+			<li>
+				In the second task, you are provided with two calculations with the results stored in the variables result and result2. You need to take the calculations, multiply them, and format the result to two decimal places. 
+			</li>
+			<li>Try updating the live code below to recreate the finished example by following these steps:</li>
+			<li>
+				Multiply result and result2 and assign the result back to result (use assignment shorthand).
+			</li>
+			<li>
+				Format result so that it has two decimal places and store it in a variable called finalResult.
+			</li>
+			<li>
+				Check the data type of finalResult using typeof. If it's a string, convert it to a number type and store the result in a variable called finalNumber.
+			</li>
+			<li>To pass this test, finalNumber should have a result of 4633.33.</li>
+		</ul>
+	</body>
+	<script>
+		// Final result should be 4633.33
+		// Add/update your code here
+	
+		let result = 7 + 13 / 9 + 7;
+		let result2 = 100 / 2 * 6;
+	
+		result *= result2
+		let finalResult=result.toFixed(2)
+		
+		console.log(typeof finalResult)
+		finalNumber=Number(finalResult)
+		console.log(typeof finalResult)
+
+
+
+		// Don't edit the code below here!
+	
+		const section = document.querySelector('section');
+	
+		const para1 = document.createElement('p');
+		para1.textContent = `Your finalResult is ${ finalResult }`;
+		const para2 = document.createElement('p');
+		const finalNumberCheck = isNaN(finalNumber) === false ? 'finalNumber is a number type. Well done!' : `Ooops! finalNumber is not a number.`;
+		para2.textContent = finalNumberCheck;
+	
+		section.appendChild(para1);
+		section.appendChild(para2);
+	  </script>
+</html>

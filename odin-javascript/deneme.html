@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Shopping list example</title>
+		<style>
+			li {
+				margin-bottom: 10px;
+			}
+
+			li button {
+				font-size: 12px;
+				margin-left: 20px;
+				color: #666;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>My shopping list</h1>
+
+		<div>
+			<label for="item">Enter a new item:</label>
+			<input type="text" name="item" id="item" />
+			<button>Add item</button>
+		</div>
+
+		<ul></ul>
+
+		<script>
+            
+			const ul = document.querySelector("ul")
+			const input = document.querySelector("input")
+			input.focus()
+			const button = document.querySelector("button")
+			counter = 1
+			const deleteButtons = document.querySelector(".deteleButton")
+			function clickResponse(event) {
+				const span = document.createElement("span")
+				span.setAttribute("id", `span${counter}`)
+
+				const createButton = document.createElement("button")
+				createButton.setAttribute("id", `button${counter}`)
+				createButton.setAttribute("class", `deleteButton`)
+				const li = document.createElement("li")
+				const store = input.value
+				console.log(store)
+
+				input.value = ""
+				span.textContent = store
+				createButton.textContent = "Sil"
+				li.appendChild(span)
+				li.appendChild(createButton)
+
+				ul.appendChild(li)
+				counter++
+				console.log(event)
+				input.focus()
+			}
+
+			function deleteButton(event) {
+				if (event.target.tagName === "BUTTON" && event.target.textContent === "Sil") {
+					const li = event.target.parentElement // Butonun bulunduğu <li> öğesi
+                        console.log('Silinecek öğe:', li);
+					 ul.removeChild(li) // Liste öğesini kaldır
+                    console.log(event)
+				}
+                
+				
+			}
+			ul.addEventListener("click", deleteButton)
+			button.addEventListener("click", clickResponse)
+            
+		</script>
+	</body>
+</html>

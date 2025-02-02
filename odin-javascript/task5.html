@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<title>Math: Task 1</title>
+		<style>
+			p {
+				color: purple;
+				margin: 0.5em 0;
+			}
+			ol {
+				display: flex;
+				flex-direction: column;
+			}
+			
+			body {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width: 45%;
+				height: 100vh;
+				max-height: 500px;
+				gap: 3vw;
+				border: 3px solid black;
+				margin: 2%;
+                justify-content: center;
+			}
+			* {
+				box-sizing: border-box;	
+				margin: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<span
+			>Try updating the live code below to recreate the finished example by following these
+			steps:
+		</span>
+		<ol>
+			In the final task for this article, we want you to write some tests. There are three groups, each consisting of a statement and two variables. For each one, write a test that proves or disproves the statement made. Store the results of those tests in variables called weightComparison, heightComparison, and pwdMatch, respectively. 
+		</ul>
+	</body>
+    <script>
+	console.log("Hoşgeldiniz");
+	let kimsiniz;
+
+	kimsiniz = prompt("Kimsiniz?")
+
+		if(kimsiniz==="Admin"){
+			let sifre= prompt("Sifreyi giriniz")
+			
+			if (sifre==="TheMaster"){
+				alert("Hosgeldiniz.");
+
+			}else if(sifre===null||sifre===""){
+				alert("İptal Edildi.");
+			}else{
+				alert("Yanlis Sifre");
+			}
+		}else if(kimsiniz ===null||kimsiniz===""){
+			alert("İptal Edildi");
+		}else{
+			alert("Sizi tanımıyorum.");
+		}
+	
+	  </script>
+</html>
