@@ -1,46 +1,48 @@
 @font-face {
-  font-family: 'latoregular';
-  src: url('/intermediate-html-and-css/fonts/lato-regular-webfont.woff2') format('woff2'),
-       url('/intermediate-html-and-css/fonts/lato-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
+	font-family: "latoregular";
+	src: url("/intermediate-html-and-css/fonts/lato-regular-webfont.woff2") format("woff2"),
+		url("/intermediate-html-and-css/fonts/lato-regular-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
 }
 
 
 
 
 
-
-
+@font-face {
+  font-family: 'CustomFont';
+  src: url('/intermediate-html-and-css/fonts/lato-regular-webfont.woff2') format('woff2');
+  unicode-range: U+00C7, U+00E7, U+011E, U+011F, U+0130, U+0131, 
+                U+00D6, U+00F6, U+015E, U+015F, U+00DC, U+00FC;
+}
 
 /* General setup */
 
-
 html {
-  font-size: 10px;
-  margin: 0;
-  font-family:'latoregular'
+	font-size: 10px;
+	margin: 0;
+	font-family: "latoregular";
 }
 
 body {
-  width: 80%;
-  max-width: 800px;
-  margin: 0 auto;
+	width: 80%;
+	max-width: 800px;
+	margin: 0 auto;
 }
 
 /* Typography */
 
 h1 {
-  font-size: 3.2rem;
+	font-size: 3.2rem;
 }
 
 h2 {
-  font-size: 2.4rem;
+	font-size: 2.4rem;
 }
 
 p {
-  font-size: 1.4rem;
-  line-height: 1.6;
-  word-spacing: 0.6rem;
+	font-size: 1.4rem;
+	line-height: 1.6;
+	word-spacing: 0.6rem;
 }
