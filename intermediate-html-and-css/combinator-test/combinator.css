@@ -1,16 +1,10 @@
-a:link {
-	color: orange;
+body {
+	font: 1.2em / 1.5 sans-serif;
 }
-a:visited {
-	color: green;
+h2 + p{
+	color:red;
 }
-a:hover {
-	text-decoration: none;
+.list > li{
+	list-style-type: none;
+	border-bottom: 1px grey solid;
 }
-.container  p:first-child {
-	font-size: 150%;
-	&::first-line {
-		color: red;
-	}
-}
-
