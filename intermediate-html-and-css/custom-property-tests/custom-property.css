@@ -1,0 +1,45 @@
+/* Varsayılan Değişkenler */
+
+
+@property --dropdown-bg {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: transparent;
+  }
+:root {
+	--dropdown-bg: red;
+	--dropdown-text: black;
+	
+}
+.dropdown:first-child{
+	--dropdown-bg: inherit;
+}
+
+/* Koyu Tema Container'ı */
+.dark-theme {
+	--dropdown-bg: #2c3e50;
+	--dropdown-text: white;
+	background: #272020; /* Container'ın arkaplanı (gri) */
+	padding: 20px;
+	margin: 20px;
+}
+
+/* Dropdown'ın KENDİ Değişkenleri */
+.dropdown {
+	--dropdown-bg: gray; /* Kendi varsayılan rengi (gri) */
+	--dropdown-text: black;
+	background: var(--dropdown-bg);
+	color: var(--dropdown-text);
+	padding: 10px;
+	border: 1px solid #ccc;
+	margin: 10px 0;
+}
+
+/* Koyu Temada Inherit Kullanımı */
+.dark-theme .dropdown.inherit {
+	--dropdown-bg: inherit; /* Container'ın --dropdown-bg'sini al */
+	--dropdown-text: inherit; /* Container'ın --dropdown-text'ini al */
+}
+*{
+	outline: 1px black solid;
+}

@@ -1,0 +1,55 @@
+/* Varsayılan Değişkenler */
+
+/* @property --dropdown-bg {
+	syntax: "<color>";
+	inherits: true;
+	initial-value: transparent;
+} */
+:root {
+	--color-primary: orange;
+	--color-text: black;
+}
+
+.container {
+	--color-primary: lightblue;
+	--color-text: navy;
+	padding: 20px;
+}
+
+.special-box {
+	--color-primary: inherit;
+	--color-text: inherit;
+}
+
+.box {
+	--color-primary: pink;
+	--color-text: darkred;
+	background: var(--color-primary);
+	color: var(--color-text);
+	padding: 15px;
+	margin: 10px;
+	border: 2px solid var(--color-text);
+}
+
+
+
+
+
+body div.box.special-box{
+    --color-primary: inherit;
+	--color-text: inherit;
+    
+}
+
+
+
+
+
+
+
+
+
+
+* {
+	outline: 1px black solid;
+}
