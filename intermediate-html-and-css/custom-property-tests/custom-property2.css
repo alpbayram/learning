@@ -10,16 +10,28 @@
 	--color-text: black;
 }
 
+
 .container {
 	--color-primary: lightblue;
 	--color-text: navy;
 	padding: 20px;
 }
 
-.special-box {
+div.special-box {
 	--color-primary: inherit;
 	--color-text: inherit;
 }
+
+body div.container{
+    --color-primary: inherit;
+	--color-text: inherit;
+}
+body div.container .box:first-child{
+    --color-primary: inherit;
+	--color-text: inherit;
+}
+
+
 
 .box {
 	--color-primary: pink;
@@ -30,23 +42,6 @@
 	margin: 10px;
 	border: 2px solid var(--color-text);
 }
-
-
-
-
-
-body div.box.special-box{
-    --color-primary: inherit;
-	--color-text: inherit;
-    
-}
-
-
-
-
-
-
-
 
 
 
