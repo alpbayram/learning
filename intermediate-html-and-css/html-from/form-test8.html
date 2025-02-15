@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<title>Advanced styling: Task 3</title>
+		<style>
+			body {
+				background-color: #fff;
+				color: #333;
+				font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+				padding: 1em;
+				margin: 0;
+			}
+
+			* {
+				box-sizing: border-box;
+			}
+
+			button,
+			input,
+			select {
+				font-family: inherit;
+				font-size: 100%;
+				padding: 0;
+				margin: 0;
+			}
+
+			fieldset {
+				padding: 10px 30px 0;
+				width: 400px;
+			}
+
+			legend {
+				color: white;
+				background: black;
+				padding: 5px 10px;
+			}
+
+			fieldset > div {
+				margin-bottom: 20px;
+				display: flex;
+				flex-flow: row wrap;
+			}
+
+			button,
+			label,
+			input {
+				display: block;
+				font-family: inherit;
+				font-size: 100%;
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+				width: 100%;
+				padding: 5px;
+				height: 30px;
+			}
+
+			input {
+				box-shadow: inset 1px 1px 3px #ccc;
+				border-radius: 5px;
+			}
+
+			input:hover,
+			input:focus {
+				background-color: #eee;
+			}
+
+			button {
+				width: 60%;
+				margin: 0 auto;
+			}
+			div input + span {
+				position: relative;
+			}
+			div input[required] + span::before {
+				content: "*";
+				position: absolute;
+				background-color: black;
+				color: white;
+				width: 10px;
+				line-height: 30px;
+				text-align: center;
+				top: -29px;
+				left: -10px;
+				border-radius: 4px;
+			}
+			div > * {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+			}
+
+			div input:invalid + span::after {
+				content: "✖";
+				background-color: initial;
+				width: 50px;
+				left: -18px;
+				position: absolute;
+
+				color: red;
+				top: 0px;
+				text-align: center;
+				line-height: 30px;
+				text-align: center;
+
+				border-radius: 4px;
+			}
+			div input:valid + span::after {
+				content: "✓";
+				background-color: initial;
+				width: 50px;
+				left: -18px;
+				position: absolute;
+
+				color: green;
+				top: 0px;
+				text-align: center;
+				line-height: 30px;
+				text-align: center;
+
+				border-radius: 4px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<form>
+			<fieldset>
+				<legend>Feedback form</legend>
+
+				<p>
+					Required fields are labelled with
+					<span aria-label="Required" title="Required">"*"</span>.
+				</p>
+				<div>
+					<label for="fname">First name: </label>
+					<input id="fname" name="fname" type="text" required />
+					<span></span>
+				</div>
+				<div>
+					<label for="lname">Last name: </label>
+					<input id="lname" name="lname" type="text" required />
+					<span></span>
+				</div>
+				<div>
+					<label for="email">Email address: </label>
+					<input id="email" name="email" type="email" />
+					<span></span>
+				</div>
+				<div><button>Submit</button></div>
+			</fieldset>
+		</form>
+	</body>
+</html>
