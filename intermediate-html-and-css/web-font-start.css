@@ -6,15 +6,12 @@
 	font-style: normal;
 }
 
-
-
-
-
 @font-face {
-  font-family: 'CustomFont';
-  src: url('/intermediate-html-and-css/fonts/lato-regular-webfont.woff2') format('woff2');
-  unicode-range: U+00C7, U+00E7, U+011E, U+011F, U+0130, U+0131, 
-                U+00D6, U+00F6, U+015E, U+015F, U+00DC, U+00FC;
+	font-family: "CustomFont";
+	src: url("/intermediate-html-and-css/fonts/lato-regular-webfont.woff2") format("woff2");
+	unicode-range: U+00C7, U+00E7, U+011E, U+011F, U+0130, U+0131, U+00D6, U+00F6, U+015E, U+015F,
+		U+00DC, U+00FC;
+	font-display: fallback;
 }
 
 /* General setup */
