@@ -66,10 +66,10 @@ let lazy = {
 // This one found the food
 speedy.eat("apple", "deneme");
 
-alert(speedy.stomach); // apple
+// alert(speedy.stomach); // apple
 
-// This one also has it, why? fix please.
-alert(lazy.stomach); // apple
+// // This one also has it, why? fix please.
+// alert(lazy.stomach); // apple
 
 function Player(name) {
 	this.name = name;
@@ -80,3 +80,31 @@ Player.prototype.play = function () {
 };
 
 const player1 = new Player("Mehmet");
+
+const user = {
+	firstName: "Patrick",
+	lastName: "Scott",
+	hobbies: ["programming", "piano"],
+	listHobbies: function () {
+		console.log(this);
+		hobbies.forEach(function (hobby) {
+			console.log(this.firstName);
+			console.log(hobby);
+			console.log(this);
+		}, this);
+	},
+};
+
+function makeAdding(firstNumber) {
+	const first = firstNumber;
+	return function resulting(secondNumber) {
+		const second = secondNumber;
+		debugger;
+		return first + second;
+	};
+}
+
+const add5 = makeAdding(5);
+console.log(add5);
+console.dir(add5);
+add5(2);
