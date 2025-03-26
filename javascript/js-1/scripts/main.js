@@ -73,6 +73,9 @@ speedy.eat("apple", "deneme");
 
 function Player(name) {
 	this.name = name;
+	this.deneme = function () {
+		console.log("deneme");
+	};
 }
 
 Player.prototype.play = function () {
@@ -108,3 +111,23 @@ const add5 = makeAdding(5);
 console.log(add5);
 console.dir(add5);
 add5(2);
+
+const obj = { a: 1, b: 2 };
+const { a, b } = obj;
+// This creates two variables, a and b,
+// which are equivalent to
+// const a = obj.a;
+// const b = obj.b;
+
+const array = [1, 2, 3, 4, 5];
+const [zerothEle, firstEle] = array;
+// This creates zerothEle and firstEle, both of which point
+// to the elements in the 0th and 1st indices of the array
+function deneme(){
+	if (1 === 1) {
+		var cool = true;
+	}
+	console.log(cool);
+	
+}
+deneme()
